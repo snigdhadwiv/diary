@@ -1,0 +1,70 @@
+/* app/globals.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    /* Define your color variables first */
+    --color-ivory: #FFFFF0;
+    --color-deep-blue: #001F3F;
+    --color-ragas-red: #d32f2f; /* Defined the missing color */
+    --color-ragas-gold: #ffb74d;
+    --color-ragas-dark: #1a237e;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-deep-blue);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-block;
+    background-color: var(--color-ragas-red);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-ragas-dark);
+  }
+}
+
+@layer utilities {
+  /* Completely safe text balancing alternative */
+  .text-balance {
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+    word-break: normal;
+  }
+  
+  .swar-highlight {
+    color: var(--color-ragas-red);
+    font-weight: bold;
+    font-size: 1.25em;
+  }
+  
+  /* Font face definitions */
+  .font-devanagari {
+    font-family: "Noto Sans Devanagari", "Arial Unicode MS", sans-serif;
+  }
+}
